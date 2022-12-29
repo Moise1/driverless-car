@@ -12,20 +12,41 @@ class Controls {
     document.onkeydown = (e) => {
       switch (e.key) {
         case "ArrowLeft":
-          return (this.left = true);
+          this.left = true;
+          break;
 
         case "ArrowRight":
-          return (this.right = true);
+          this.right = true;
+          break;
 
         case "ArrowUp":
-          return (this.forward = true);
+          this.forward = true;
+          break;
 
         case "ArrowDown":
-          return (this.reverse = true);
+          this.reverse = true;
+          break;
+      }
+    };
+
+    document.onkeyup = (e) => {
+      switch (e.key) {
+        case "ArrowLeft":
+          this.left = false;
+          break;
+
+        case "ArrowRight":
+          this.right = false;
+          break;
+
+        case "ArrowUp":
+          this.forward = false;
+          break;
+
+        case "ArrowDown":
+          this.reverse = false;
+          break;
       }
     };
   }
 }
-
-
-// Stopped 14:35
